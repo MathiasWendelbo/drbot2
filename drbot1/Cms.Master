@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Cms.master.cs" Inherits="drbot1.Cms" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="main">
+                <div id="top">
+                    <div id="menu">
+                        <div class="menu"><a href="sp.aspx">Spørgmål</a></div>
+                        <div class="menu"><a href="svar.aspx">Svar</a></div>
+                        <div class="menu"><a href="brn.aspx">Bruger</a></div>
+                        <div class="menu"><asp:HyperLink ID="HyperLink_obrn" runat="server" NavigateUrl="obrn.aspx">Opret bruger</asp:HyperLink></div>
+                        <div class="menu"><asp:Label ID="Label_brn" runat="server"></asp:Label></div>
+                        <div class="menu"><asp:Button ID="Button_log_ud" runat="server" Text="Log ud" OnClick="Button_log_ud_Click" /></div>
+                    </div>
+                </div>
+                <div id="indhold">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
